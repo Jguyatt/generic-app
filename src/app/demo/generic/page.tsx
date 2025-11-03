@@ -191,73 +191,73 @@ export default function GenericDemoPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 lg:pb-0">
       {/* Header */}
-      <header className="border-b border-gray-300 bg-white px-4 py-3 sticky top-0 z-10 shadow-sm">
+      <header className="border-b border-gray-300 bg-white px-3 py-2 sticky top-0 z-20 shadow-sm">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
-          <h1 className="text-xl font-bold text-gray-800">Generic Betting App</h1>
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600">Balance: $1,000.00</span>
-            <button className="px-3 py-1 bg-gray-200 hover:bg-gray-300 text-gray-800 text-sm rounded border border-gray-300">
+          <h1 className="text-base sm:text-xl font-bold text-gray-800">Generic Betting App</h1>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <span className="text-xs sm:text-sm text-gray-600">Balance: $1,000</span>
+            <button className="px-2 py-1 sm:px-3 bg-gray-200 hover:bg-gray-300 text-gray-800 text-xs sm:text-sm rounded border border-gray-300">
               Account
             </button>
           </div>
         </div>
       </header>
 
-      {/* Multiple warning banners */}
-      <div className="bg-yellow-50 border-b border-yellow-200 px-4 py-2">
-        <p className="text-xs text-yellow-800 text-center max-w-7xl mx-auto">
-          ⚠️ Odds updated 2 minutes ago • Lines subject to change • Bets may be rejected • Account verification required for withdrawals
+      {/* Multiple warning banners - mobile optimized */}
+      <div className="bg-yellow-50 border-b border-yellow-200 px-2 py-1.5">
+        <p className="text-[10px] sm:text-xs text-yellow-800 text-center max-w-7xl mx-auto">
+          ⚠️ Odds updated 2 min ago • Lines may change • Account verification required
         </p>
       </div>
       
-      <div className="bg-orange-50 border-b border-orange-200 px-4 py-2">
+      <div className="bg-orange-50 border-b border-orange-200 px-2 py-1.5 hidden sm:block">
         <p className="text-xs text-orange-800 text-center max-w-7xl mx-auto">
           🔒 Enhanced security enabled • All bets require 2FA • Maximum processing time: 72 hours
         </p>
       </div>
 
-      <div className="bg-red-50 border-b border-red-200 px-4 py-2">
-        <p className="text-xs text-red-800 text-center max-w-7xl mx-auto">
-          ⚠️ NOTICE: Due to regulatory requirements, all bets over $50 require manual review • Gambling involves risk of loss
+      <div className="bg-red-50 border-b border-red-200 px-2 py-1.5">
+        <p className="text-[10px] sm:text-xs text-red-800 text-center max-w-7xl mx-auto">
+          ⚠️ NOTICE: Bets over $50 require manual review • Risk of loss
         </p>
       </div>
 
       {/* Main content */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        {/* Account status banner */}
-        <div className="mb-6 border border-blue-300 bg-blue-50 rounded p-4">
-          <h3 className="text-sm font-semibold text-blue-900 mb-2">📋 Account Status</h3>
-          <div className="grid sm:grid-cols-3 gap-3 text-xs">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-6">
+        {/* Account status banner - mobile optimized */}
+        <div className="mb-3 sm:mb-6 border border-blue-300 bg-blue-50 rounded p-2 sm:p-4">
+          <h3 className="text-xs sm:text-sm font-semibold text-blue-900 mb-2">📋 Account Status</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 text-[10px] sm:text-xs">
             <div>
-              <p className="text-blue-700 mb-1">Identity Verification:</p>
+              <p className="text-blue-700 mb-0.5 sm:mb-1">ID Verification:</p>
               <p className="text-blue-900 font-medium">✓ Verified</p>
             </div>
             <div>
-              <p className="text-blue-700 mb-1">Daily Limit Remaining:</p>
+              <p className="text-blue-700 mb-0.5 sm:mb-1">Daily Limit:</p>
               <p className="text-blue-900 font-medium">$450 / $1,000</p>
             </div>
-            <div>
-              <p className="text-blue-700 mb-1">Pending Withdrawals:</p>
-              <p className="text-blue-900 font-medium">Processing (Est. 5-7 days)</p>
+            <div className="col-span-2 sm:col-span-1">
+              <p className="text-blue-700 mb-0.5 sm:mb-1">Withdrawals:</p>
+              <p className="text-blue-900 font-medium">Processing (5-7d)</p>
             </div>
           </div>
-          <p className="text-xs text-blue-700 mt-2">
-            <a href="#" className="underline">Complete additional verification</a> to increase your limits
+          <p className="text-[10px] sm:text-xs text-blue-700 mt-2">
+            <a href="#" className="underline">Complete verification</a> to increase limits
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 gap-3 sm:gap-6">
           {/* Games section */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-gray-800">Today's Games</h2>
-              <div className="flex gap-2">
-                <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded">All Sports</button>
-                <button className="px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded">NHL</button>
-                <button className="px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded">NBA</button>
-                <button className="px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded">NFL</button>
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
+            <div className="flex items-center justify-between mb-2 sm:mb-4">
+              <h2 className="text-base sm:text-lg font-semibold text-gray-800">Today's Games</h2>
+              <div className="flex gap-1 sm:gap-2">
+                <button className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-blue-600 text-white rounded">All</button>
+                <button className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-gray-200 text-gray-700 rounded">NHL</button>
+                <button className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-gray-200 text-gray-700 rounded">NBA</button>
+                <button className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-gray-200 text-gray-700 rounded">NFL</button>
               </div>
             </div>
 
@@ -439,8 +439,59 @@ export default function GenericDemoPage() {
             </div>
           </div>
 
-          {/* Bet Slip */}
-          <div className="lg:col-span-1">
+          {/* Bet Slip - Desktop only, mobile uses bottom sheet */}
+          <div className="hidden lg:block lg:col-span-1">
+            <BetSlip 
+              selections={selections}
+              onRemove={handleRemove}
+              onPlaceBet={handlePlaceBet}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Bet Slip - Fixed bottom */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-30 bg-white border-t-2 border-gray-300 shadow-lg">
+        {selections.length === 0 ? (
+          <div className="p-3 text-center">
+            <p className="text-xs text-gray-500">Tap odds to add to bet slip</p>
+          </div>
+        ) : (
+          <div className="p-3">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-gray-800">
+                {selections.length} selection{selections.length > 1 ? 's' : ''}
+              </span>
+              <button 
+                onClick={() => {
+                  const modal = document.getElementById('mobile-bet-slip-modal')
+                  if (modal) modal.classList.remove('hidden')
+                }}
+                className="px-4 py-2 bg-green-600 text-white text-sm font-semibold rounded-lg active:bg-green-700"
+              >
+                Review Bet →
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Mobile Bet Slip Modal */}
+      <div id="mobile-bet-slip-modal" className="hidden lg:hidden fixed inset-0 z-50 bg-black/50">
+        <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-[90vh] overflow-y-auto">
+          <div className="sticky top-0 bg-white border-b border-gray-300 p-3 flex items-center justify-between">
+            <h3 className="text-lg font-bold text-gray-800">Bet Slip</h3>
+            <button 
+              onClick={() => {
+                const modal = document.getElementById('mobile-bet-slip-modal')
+                if (modal) modal.classList.add('hidden')
+              }}
+              className="text-gray-500 hover:text-gray-700 text-2xl"
+            >
+              ×
+            </button>
+          </div>
+          <div className="p-4">
             <BetSlip 
               selections={selections}
               onRemove={handleRemove}

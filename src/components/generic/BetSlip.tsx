@@ -70,13 +70,13 @@ export default function BetSlip({ selections, onRemove, onPlaceBet }: BetSlipPro
   }
 
   return (
-    <Card className="sticky top-20 border-gray-300 bg-white">
-      <CardHeader className="bg-gray-100 border-b border-gray-300">
-        <CardTitle className="text-lg text-gray-800">
+    <Card className="lg:sticky lg:top-20 border-gray-300 bg-white">
+      <CardHeader className="bg-gray-100 border-b border-gray-300 p-3 sm:p-6">
+        <CardTitle className="text-base sm:text-lg text-gray-800">
           Bet Slip ({selections.length}) - Step {step}/4
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-4 space-y-4">
+      <CardContent className="p-3 sm:p-4 space-y-3 sm:space-y-4">
         {selections.length === 0 ? (
           <p className="text-sm text-gray-500 text-center py-4">
             Click on odds to add to your bet slip
